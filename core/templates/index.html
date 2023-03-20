@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>XML to PDF</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='static/main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <center><h1>Converta seu arquivo XML para PDF</h1></center>
+    <br>
+    <hr>
+    <div class="container">
+        <form name="conversor" id="conversor" action="{% url 'Handle_Form' %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <table align="center" class="main_cell ">
+                <tbody>
+                  <tr>
+                    <td class="nowrap">Arquivo XML da NFe:</td>
+                    <td> <input name="arquivoXml" class="form_size" type="file"> </td>
+                  </tr>
+                    <td colspan="6">    
+                        <input value="Gerar DANFE em PDF" type="submit">
+                    </td>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
